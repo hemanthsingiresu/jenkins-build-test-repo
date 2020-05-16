@@ -13,8 +13,9 @@ node('master')
 
 	 if (test)
 	 {
+	 println (" in if loop")
 	 def folder = sh 'date +%F-%T'
-	 zip folder.zip $WORKSPACE
+	 zip ${folder}.zip $WORKSPACE
 	 println ('success')
 	  
 	 }
