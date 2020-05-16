@@ -9,7 +9,7 @@ node('master')
 	{
 
 	 def test = sh 'mvn -Dtest=WorkingApplicationTests test'
-	 def fail = sh 'mvn -Dtest=FailingApplicationTests test'
+	 /*def fail = sh 'mvn -Dtest=FailingApplicationTests test'*/
 
 	 if (test)
 	 {
@@ -18,12 +18,12 @@ node('master')
 	 println ('success')
 	  
 	 }
-	 elseif (fail)
+	 /*elseif (fail)
 	 {
 	  println ('the error is : ${fail}')
       println ('test failed')
       
-	 }
+	 }*/
 
 	}
 }
