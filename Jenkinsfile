@@ -11,7 +11,7 @@ node('master')
 	 def test = sh 'mvn -Dtest=WorkingApplicationTests test'
 	 /*def fail = sh 'mvn -Dtest=FailingApplicationTests test'*/
 
-	 if (test)
+	 if (test != null)
 	 {
 	 println (" in if loop")
 	 def folder = sh 'date +%F-%T'
