@@ -12,14 +12,14 @@ node('master')
 	 /*def fail = sh 'mvn -Dtest=FailingApplicationTests test'*/
 		//println("the test  result is ${test}")
 
-	 if(test)
-	 {
-	 println (" in if loop")
+	 //if(test)
+	 //{
+	 //println (" in if loop")
 	 def folder = sh 'date +%F-%T'
 	 zip ${folder}.zip $WORKSPACE
 	 println ('success')
 	  
-	 }
+	 //}
 	 /*elseif (fail)
 	 {
 	  println ('the error is : ${fail}')
